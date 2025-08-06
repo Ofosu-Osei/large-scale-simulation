@@ -24,9 +24,6 @@ This project simulates large-scale production environments—factories, mines, s
 
 * Session management: Robust concurrent user and simulation session handling.
 
-
-![Simulation Overview](docs/client-server-architecture.png)
-
 ### User Interfaces
 
 * Command-line client (Java): Picocli/Jackson-based CLI supporting request management, simulation stepping, and state persistence.
@@ -62,6 +59,21 @@ This project simulates large-scale production environments—factories, mines, s
 * Testing: JUnit 5, Mockito, Clover
 
 * Build/CI: Gradle, GitLab CI/CD
+
+## Architecture
+The architecture is designed to support high scalability and modularity, allowing for easy addition of new simulation components and features. The backend handles complex event processing and state management, while the frontend provides an intuitive user interface for interaction.
+
+### Client-Server Architecture
+
+![Simulation Overview](docs/client-server-architecture.png)
+
+### Class Diagram - Backend
+
+![Simulation Backend](docs/Simulation-Backend.png)
+
+### Class Diagram - Frontend
+
+![Simulation Frontend](docs/Simulation-Frontend.png)
 
 ## Getting Started - Prerequisites
 
