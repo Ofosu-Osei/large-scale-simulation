@@ -1,0 +1,10 @@
+Invalid command
+Invalid command
+Invalid command1
+invalid building name
+Invalid command
+invalid policy name
+Invalid command
+invalid policy name
+invalid building name
+Simulation completed at time-step 0

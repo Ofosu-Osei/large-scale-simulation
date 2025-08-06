@@ -1,0 +1,14 @@
+verbose 2
+request 'door' from 'D'
+step 5
+save temp.json
+step 15
+load temp.json
+step 15
+load temp.json
+verbose 0
+step 15
+load temp.json
+verbose 1
+step 15
+finish

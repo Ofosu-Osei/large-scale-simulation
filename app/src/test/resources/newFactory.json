@@ -1,0 +1,8 @@
+{
+    "name" : "Hi2",
+    "type" : "factory",
+    "info" : {
+        "type" : "hinge", 
+        "coordinate": [10, 15]
+    }
+}

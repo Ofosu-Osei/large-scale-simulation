@@ -1,0 +1,107 @@
+[source selection]: D (qlen) has request for wood on 0
+[D:door:0] For ingredient wood
+    W: 0
+    Selecting W
+[ingredient assignment]: wood assigned to W to deliver to D
+[source selection]: D (qlen) has request for handle on 0
+[D:door:1] For ingredient handle
+    Ha: 0
+    Selecting Ha
+[ingredient assignment]: handle assigned to Ha to deliver to D
+[source selection]: Ha (qlen) has request for metal on 0
+[Ha:handle:0] For ingredient metal
+    M: 0
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Ha
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:2] For ingredient hinge
+    Hi: 0
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 1
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:3] For ingredient hinge
+    Hi: 1
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 2
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:4] For ingredient hinge
+    Hi: 2
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 3
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+[recipe selection]: D has fifo on cycle 1
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 1
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 1
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 1
+    0: is ready
+    Selecting 0
+[ingredient delivered]: wood to D from W on cycle 1
+[recipe selection]: M has fifo on cycle 1
+    0: is ready
+    1: is ready
+    2: is ready
+    3: is ready
+    Selecting 0
+[ingredient delivered]: metal to Ha from M on cycle 1
+    0: handle is ready
+[recipe selection]: M has fifo on cycle 2
+    0: is ready
+    1: is ready
+    2: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 2
+    0: hinge is ready
+[ingredient delivered]: hinge to D from Hi on cycle 3
+[recipe selection]: M has fifo on cycle 3
+    0: is ready
+    1: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 3
+    0: hinge is ready
+[recipe selection]: Hi has fifo on cycle 4
+    0: is ready
+    1: is ready
+    Selecting 0
+[ingredient delivered]: hinge to D from Hi on cycle 4
+[recipe selection]: M has fifo on cycle 4
+    0: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 4
+    0: hinge is ready
+[recipe selection]: Hi has fifo on cycle 5
+    0: is ready
+    Selecting 0
+[ingredient delivered]: hinge to D from Hi on cycle 5
+[ingredient delivered]: handle to D from Ha on cycle 6
+    0: door is ready
+[order complete] Order 0 completed (door) at time 18
+[ingredient delivered]: handle to D from Ha on cycle 6
+    0: door is ready
+[order complete] Order 0 completed (door) at time 18
+[order complete] Order 0 completed (door) at time 18
+[ingredient delivered]: handle to D from Ha on cycle 6
+    0: door is ready
+[order complete] Order 0 completed (door) at time 18
+Simulation completed at time-step 20

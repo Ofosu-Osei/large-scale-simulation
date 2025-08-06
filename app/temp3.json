@@ -1,0 +1,511 @@
+{
+  "requestId" : 40,
+  "cycle" : 4,
+  "recipes" : [ {
+    "output" : "door",
+    "latency" : 12,
+    "ingredients" : {
+      "wood" : 1,
+      "handle" : 1,
+      "hinge" : 3
+    }
+  }, {
+    "output" : "handle",
+    "latency" : 5,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "hinge",
+    "latency" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "wood",
+    "latency" : 1,
+    "ingredients" : { }
+  }, {
+    "output" : "metal",
+    "latency" : 1,
+    "ingredients" : { }
+  } ],
+  "types" : [ {
+    "name" : "door",
+    "recipes" : [ "door" ]
+  }, {
+    "name" : "handle",
+    "recipes" : [ "handle" ]
+  }, {
+    "name" : "hinge",
+    "recipes" : [ "hinge" ]
+  } ],
+  "buildings" : [ {
+    "name" : "D",
+    "type" : "door",
+    "sources" : [ [ "W", 12, 11, 1, 0 ], [ "Hi", 8, 7, 1, 0 ], [ "Ha", 4, 3, 1, 0 ] ],
+    "requests" : [ 10, 20, 30 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 0, 0 ],
+    "deliveries" : [ ]
+  }, {
+    "name" : "Ha",
+    "type" : "handle",
+    "sources" : [ [ "M", 16, 15, 5, 4 ] ],
+    "requests" : [ 12, 22, 32 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 4, 4 ],
+    "deliveries" : [ ]
+  }, {
+    "name" : "Hi",
+    "type" : "hinge",
+    "sources" : [ [ "M", 15, 16, 8, 9 ] ],
+    "requests" : [ 14, 16, 18, 24, 26, 28, 34, 36, 38 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 8, 8 ],
+    "deliveries" : [ ]
+  }, {
+    "name" : "W",
+    "mine" : "wood",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 12, 12 ],
+    "deliveries" : [ {
+      "requestID" : 11,
+      "timeleft" : 20,
+      "requester" : "D",
+      "coordinate" : [ 12, 9 ]
+    }, {
+      "requestID" : 21,
+      "timeleft" : 21,
+      "requester" : "D",
+      "coordinate" : [ 12, 10 ]
+    }, {
+      "requestID" : 31,
+      "timeleft" : 22,
+      "requester" : "D",
+      "coordinate" : [ 12, 11 ]
+    } ]
+  }, {
+    "name" : "M",
+    "mine" : "metal",
+    "requests" : [ 19, 23, 25, 27, 29, 33, 35, 37, 39 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 16, 16 ],
+    "deliveries" : [ {
+      "requestID" : 13,
+      "timeleft" : 20,
+      "requester" : "Ha",
+      "coordinate" : [ 16, 13 ]
+    }, {
+      "requestID" : 15,
+      "timeleft" : 13,
+      "requester" : "Hi",
+      "coordinate" : [ 15, 15 ]
+    }, {
+      "requestID" : 17,
+      "timeleft" : 14,
+      "requester" : "Hi",
+      "coordinate" : [ 15, 16 ]
+    } ]
+  }, {
+    "name" : "A",
+    "stores" : "door",
+    "capacity" : 3,
+    "priority" : 1.2,
+    "frequency" : -1,
+    "remain" : 0,
+    "amount" : 0,
+    "sources" : [ [ "D", 0, -1, 9, 0 ] ],
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 20, 20 ],
+    "deliveries" : [ ]
+  } ],
+  "requests" : [ {
+    "id" : 10,
+    "recipe" : "door",
+    "requester" : "A",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 20,
+    "recipe" : "door",
+    "requester" : "A",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 30,
+    "recipe" : "door",
+    "requester" : "A",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 12,
+    "recipe" : "handle",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 22,
+    "recipe" : "handle",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 32,
+    "recipe" : "handle",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 14,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 16,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 18,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 24,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 26,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 28,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 34,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 36,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 38,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 11,
+    "recipe" : "wood",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 21,
+    "recipe" : "wood",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 31,
+    "recipe" : "wood",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 19,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 23,
+    "recipe" : "metal",
+    "requester" : "Ha",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 25,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 27,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 29,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 33,
+    "recipe" : "metal",
+    "requester" : "Ha",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 35,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 37,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 39,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 13,
+    "recipe" : "metal",
+    "requester" : "Ha",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 15,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 17,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "READY",
+    "isUserRequest" : false
+  } ],
+  "roads" : [ {
+    "coordinate" : [ 1, 0 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 1, 1 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 2, 1 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 2, 2 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 3, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 4, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 5, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 5, 3 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 5, 4 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 6, 4 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 6, 5 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 7, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 8, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 9, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 6 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 11, 6 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 6 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 7 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 8 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 9 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 10 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 11 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 6 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 7 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 4, 3 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 13, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 14, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 16, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 16, 12 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 13 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 14 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 15 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 9 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 10 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 11 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 12 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 13 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 9, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 11, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 13, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 14, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 14 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 15, 15 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 15, 16 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 9, 0 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 9, -1 ],
+    "direction" : [ 0, 1 ]
+  }, {
+    "coordinate" : [ 8, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 7, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 6, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 5, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 4, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 3, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 2, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 1, -1 ],
+    "direction" : [ 1, 0 ]
+  }, {
+    "coordinate" : [ 0, -1 ],
+    "direction" : [ 1, 0 ]
+  } ]
+}

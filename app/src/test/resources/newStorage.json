@@ -1,0 +1,10 @@
+{
+  "name" : "M_S",
+  "type" : "storage",
+  "info" : {
+    "stores" : "metal",
+    "capacity" : 5,
+    "priority" : 1.7,
+    "coordinate" : [ 0, 10 ]
+  }
+}

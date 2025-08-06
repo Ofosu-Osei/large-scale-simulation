@@ -1,0 +1,53 @@
+
+
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+  // --- Spring STOMP over WebSocket client bits ---
+  implementation 'org.springframework:spring-websocket:6.1.6'
+  implementation 'org.springframework:spring-messaging:6.1.6'
+  // needed for RestTemplateXhrTransport (SockJS XHR fallback)
+  implementation 'org.springframework:spring-web:6.1.6'
+
+  // a JSR-356 / Jakarta WebSocket impl for StandardWebSocketClient
+  // this single bundle brings in Tyrus + its dependencies
+  implementation 'org.glassfish.tyrus.bundles:tyrus-standalone-client:2.1.2'
+
+  // your other CLI deps
+  implementation 'info.picocli:picocli:4.7.6'
+  implementation 'org.slf4j:slf4j-simple:2.0.7'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'
+  implementation 'com.google.guava:guava:32.1.2-jre'
+
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'edu.duke.ece651.textclient.TextClient'
+    applicationName = 'sim-client-text'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
+
+run{
+    standardInput = System.in
+}

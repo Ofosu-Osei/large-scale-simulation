@@ -1,0 +1,21 @@
+# Node.js / React Frontend
+node_modules/
+build/
+dist/
+.env
+.DS_Store
+npm-debug.log*
+
+# Java / Maven Backend
+target/
+*.log
+*.class
+*.jar
+*.war
+hs_err_pid*
+.idea/
+*.iml
+
+# General OS files
+Thumbs.db
+Desktop.ini

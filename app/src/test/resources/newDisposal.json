@@ -1,0 +1,10 @@
+{
+    "name": "Toxic Disposer",
+    "type": "waste disposal",
+    "info": {
+      "disposeAmount": 10,
+      "capacity": 100,
+      "disposeInterval": 5,
+      "wasteTypes": ["toxic", "radioactive"]
+    }
+}

@@ -1,0 +1,10 @@
+load 1 1 1 1 1
+save 1 1 1 1 1
+connect 1 1 1 1
+set policy request 'sjf' on 'A'
+set policy reques 'a' on 'D'
+set policy request 'a' on 'D'
+set policy request 'sjf' on 
+set policy source 'sjf' on 'D'
+set policy source 'qlen' on 'A'
+finish

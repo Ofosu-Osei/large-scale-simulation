@@ -1,0 +1,62 @@
+{
+    "buildings": [
+      {
+        "name": "M1",
+        "type": "mine",
+        "x": 2,
+        "y": 2,
+        "sources": [],
+        "requests": [],
+        "inventory": { "metal": 10 },
+        "requestPolicy": "fifo",
+        "sourcePolicy": "qlen"
+      },
+      {
+        "name": "F1",
+        "type": "factory",
+        "x": 6,
+        "y": 2,
+        "sources": ["M1"],
+        "requests": [],
+        "inventory": {},
+        "requestPolicy": "fifo",
+        "sourcePolicy": "qlen"
+      },
+      {
+        "name": "S1",
+        "type": "storage",
+        "x": 4,
+        "y": 6,
+        "sources": ["F1"],
+        "requests": [],
+        "inventory": { "door": 3 },
+        "requestPolicy": "fifo",
+        "sourcePolicy": "qlen"
+      }
+    ],
+    "roads": [
+      {
+        "from": "M1",
+        "to": "F1",
+        "path": [
+          { "x": 2, "y": 2 },
+          { "x": 3, "y": 2 },
+          { "x": 4, "y": 2 },
+          { "x": 5, "y": 2 },
+          { "x": 6, "y": 2 }
+        ]
+      },
+      {
+        "from": "F1",
+        "to": "S1",
+        "path": [
+          { "x": 6, "y": 2 },
+          { "x": 6, "y": 3 },
+          { "x": 5, "y": 4 },
+          { "x": 4, "y": 5 },
+          { "x": 4, "y": 6 }
+        ]
+      }
+    ]
+  }
+  

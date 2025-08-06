@@ -1,0 +1,104 @@
+{
+  "requestId" : 10,
+  "cycle" : 10,
+  "recipes" : [ {
+    "output" : "door",
+    "latency" : 12,
+    "ingredients" : {
+      "wood" : 1,
+      "handle" : 1,
+      "hinge" : 3
+    }
+  }, {
+    "output" : "handle",
+    "latency" : 5,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "hinge",
+    "latency" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "wood",
+    "latency" : 1,
+    "ingredients" : { }
+  }, {
+    "output" : "metal",
+    "latency" : 1,
+    "ingredients" : { }
+  } ],
+  "types" : [ {
+    "name" : "door",
+    "recipes" : [ "door" ]
+  }, {
+    "name" : "handle",
+    "recipes" : [ "handle" ]
+  }, {
+    "name" : "hinge",
+    "recipes" : [ "hinge" ]
+  } ],
+  "buildings" : [ {
+    "name" : "D",
+    "type" : "door",
+    "sources" : [ "W", "Hi", "Ha" ],
+    "requests" : [ 0 ],
+    "inventory" : {
+      "hinge" : 3,
+      "wood" : 1,
+      "handle" : 1
+    },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "currReq" : 0,
+    "time" : 8
+  }, {
+    "name" : "Ha",
+    "type" : "handle",
+    "sources" : [ "M" ],
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  }, {
+    "name" : "Hi",
+    "type" : "hinge",
+    "sources" : [ "M" ],
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  }, {
+    "name" : "W",
+    "mine" : "wood",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  }, {
+    "name" : "M",
+    "mine" : "metal",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  } ],
+  "requests" : [ {
+    "id" : 0,
+    "recipe" : "door",
+    "state" : "WORKING",
+    "isUserRequest" : true
+  } ]
+}

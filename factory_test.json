@@ -1,0 +1,6 @@
+{
+    "name" : "D2",
+    "type" : "factory",
+    "info" : {"type" : "door", 
+    "coordinate": [10, 15]}
+}   

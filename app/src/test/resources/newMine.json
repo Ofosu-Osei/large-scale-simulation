@@ -1,0 +1,8 @@
+{
+    "name" : "M2",
+    "type" : "mine",
+    "info" : {
+        "mine" : "metal",
+        "coordinate": [10, 0]
+    }
+}

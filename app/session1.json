@@ -1,0 +1,56 @@
+{
+  "requestId" : 0,
+  "cycle" : 3,
+  "recipes" : [ {
+    "output" : "door",
+    "latency" : 12,
+    "waste" : "door_waste",
+    "wasteAmount" : 5,
+    "ingredients" : {
+      "wood" : 1,
+      "handle" : 1,
+      "hinge" : 3
+    }
+  }, {
+    "output" : "handle",
+    "latency" : 5,
+    "waste" : "handle_waste",
+    "wasteAmount" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "hinge",
+    "latency" : 1,
+    "waste" : "hinge_waste",
+    "wasteAmount" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "wood",
+    "latency" : 1,
+    "waste" : "null",
+    "wasteAmount" : 0,
+    "ingredients" : { }
+  }, {
+    "output" : "metal",
+    "latency" : 1,
+    "waste" : "null",
+    "wasteAmount" : 0,
+    "ingredients" : { }
+  } ],
+  "types" : [ {
+    "name" : "door",
+    "recipes" : [ "door" ]
+  }, {
+    "name" : "handle",
+    "recipes" : [ "handle" ]
+  }, {
+    "name" : "hinge",
+    "recipes" : [ "hinge" ]
+  } ],
+  "buildings" : [ ],
+  "requests" : [ ],
+  "roads" : [ ]
+}

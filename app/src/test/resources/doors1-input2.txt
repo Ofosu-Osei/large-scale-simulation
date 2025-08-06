@@ -1,0 +1,10 @@
+verbose 2
+request 'door' from 'D'
+remove 'D'
+request 'door' from 'D'
+step 10
+step 20
+step 20
+step 10
+remove 'D'
+finish

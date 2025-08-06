@@ -1,0 +1,12 @@
+load
+load src/test/resources/doors1.json
+load ../app/src/test/resources/doors1.json
+load ../doors1.json
+save 2.json
+load doors1.json
+load app/src/test/resources/doors1.json
+step1
+step 1
+request 'door' from 'D'
+create disposal_test.json
+save 2.json

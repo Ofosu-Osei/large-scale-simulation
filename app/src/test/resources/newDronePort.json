@@ -1,0 +1,7 @@
+{
+    "name" : "DP",
+    "type" : "drone port",
+    "info" : {
+        "coordinate" : [ 10, 10 ]
+    }
+}

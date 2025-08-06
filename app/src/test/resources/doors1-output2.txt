@@ -1,0 +1,436 @@
+0> 0> [source selection]: D (qlen) has request for wood on 0
+[D:door:0] For ingredient wood
+    W: 0
+    Selecting W
+[ingredient assignment]: wood assigned to W to deliver to D
+[source selection]: D (qlen) has request for handle on 0
+[D:door:1] For ingredient handle
+    Ha: 0
+    Selecting Ha
+[ingredient assignment]: handle assigned to Ha to deliver to D
+[source selection]: Ha (qlen) has request for metal on 0
+[Ha:handle:0] For ingredient metal
+    M: 0
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Ha
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:2] For ingredient hinge
+    Hi: 0
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 1
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:3] For ingredient hinge
+    Hi: 1
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 2
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+[source selection]: D (qlen) has request for hinge on 0
+[D:door:4] For ingredient hinge
+    Hi: 2
+    Selecting Hi
+[ingredient assignment]: hinge assigned to Hi to deliver to D
+[source selection]: Hi (qlen) has request for metal on 0
+[Hi:hinge:0] For ingredient metal
+    M: 3
+    Selecting M
+[ingredient assignment]: metal assigned to M to deliver to Hi
+0> cannot remove building D now. Set removeMark.
+0> request failed because: being removed
+0> [recipe selection]: D has fifo on cycle 1
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 1
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 1
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 1
+    0: is ready
+    Selecting 0
+[ingredient delivered]: wood to D from W on cycle 1
+[recipe selection]: M has fifo on cycle 1
+    0: is ready
+    1: is ready
+    2: is ready
+    3: is ready
+    Selecting 0
+[ingredient delivered]: metal to Ha from M on cycle 1
+[recipe selection]: D has fifo on cycle 2
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 2
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 2
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 2
+[recipe selection]: M has fifo on cycle 2
+    0: is ready
+    1: is ready
+    2: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 2
+[recipe selection]: D has fifo on cycle 3
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 3
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 3
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 3
+[recipe selection]: M has fifo on cycle 3
+    0: is ready
+    1: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 3
+[recipe selection]: D has fifo on cycle 4
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 4
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 4
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 4
+[recipe selection]: M has fifo on cycle 4
+    0: is ready
+    Selecting 0
+[ingredient delivered]: metal to Hi from M on cycle 4
+[recipe selection]: D has fifo on cycle 5
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 5
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 5
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 5
+[recipe selection]: M has fifo on cycle 5
+[recipe selection]: D has fifo on cycle 6
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 6
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 6
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 6
+[recipe selection]: M has fifo on cycle 6
+[recipe selection]: D has fifo on cycle 7
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 7
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 7
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 7
+[recipe selection]: M has fifo on cycle 7
+[recipe selection]: D has fifo on cycle 8
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 8
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 8
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 8
+[recipe selection]: M has fifo on cycle 8
+[recipe selection]: D has fifo on cycle 9
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 9
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 9
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 9
+[recipe selection]: M has fifo on cycle 9
+[recipe selection]: D has fifo on cycle 10
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 10
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 10
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 10
+[recipe selection]: M has fifo on cycle 10
+10> [recipe selection]: D has fifo on cycle 11
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 11
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 11
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 11
+[recipe selection]: M has fifo on cycle 11
+[recipe selection]: D has fifo on cycle 12
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 12
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 12
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 12
+[recipe selection]: M has fifo on cycle 12
+[recipe selection]: D has fifo on cycle 13
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 13
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 13
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 13
+[recipe selection]: M has fifo on cycle 13
+[recipe selection]: D has fifo on cycle 14
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 14
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 14
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 14
+[recipe selection]: M has fifo on cycle 14
+[recipe selection]: D has fifo on cycle 15
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 15
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 15
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 15
+[recipe selection]: M has fifo on cycle 15
+[recipe selection]: D has fifo on cycle 16
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 16
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 16
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 16
+[recipe selection]: M has fifo on cycle 16
+[recipe selection]: D has fifo on cycle 17
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 17
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 17
+    0: is not ready, waiting on {metal}
+    1: is not ready, waiting on {metal}
+    2: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: W has fifo on cycle 17
+[recipe selection]: M has fifo on cycle 17
+[order complete] Order 5 completed (metal) at time 17
+[recipe selection]: D has fifo on cycle 18
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 18
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 18
+    0: is ready
+    1: is ready
+    2: is ready
+    Selecting 0
+[ingredient delivered]: hinge to D from Hi on cycle 18
+[recipe selection]: W has fifo on cycle 18
+[recipe selection]: M has fifo on cycle 18
+[order complete] Order 7 completed (metal) at time 18
+[recipe selection]: D has fifo on cycle 19
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 19
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 19
+    0: is ready
+    1: is ready
+    Selecting 0
+[ingredient delivered]: hinge to D from Hi on cycle 19
+[recipe selection]: W has fifo on cycle 19
+[recipe selection]: M has fifo on cycle 19
+[order complete] Order 9 completed (metal) at time 19
+[recipe selection]: D has fifo on cycle 20
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 20
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 20
+    0: is ready
+    Selecting 0
+[ingredient delivered]: hinge to D from Hi on cycle 20
+[recipe selection]: W has fifo on cycle 20
+[recipe selection]: M has fifo on cycle 20
+[recipe selection]: D has fifo on cycle 21
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 21
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 21
+[recipe selection]: W has fifo on cycle 21
+[recipe selection]: M has fifo on cycle 21
+[recipe selection]: D has fifo on cycle 22
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 22
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 22
+[recipe selection]: W has fifo on cycle 22
+[recipe selection]: M has fifo on cycle 22
+[recipe selection]: D has fifo on cycle 23
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 23
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 23
+[recipe selection]: W has fifo on cycle 23
+[recipe selection]: M has fifo on cycle 23
+[recipe selection]: D has fifo on cycle 24
+    0: is not ready, waiting on {wood, handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 24
+    0: is not ready, waiting on {metal}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 24
+[recipe selection]: W has fifo on cycle 24
+[recipe selection]: M has fifo on cycle 24
+[order complete] Order 1 completed (wood) at time 24
+[order complete] Order 3 completed (metal) at time 24
+[recipe selection]: D has fifo on cycle 25
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 25
+    0: is ready
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 25
+[recipe selection]: D has fifo on cycle 26
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 26
+[recipe selection]: D has fifo on cycle 27
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 27
+[recipe selection]: D has fifo on cycle 28
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Hi has fifo on cycle 28
+[recipe selection]: D has fifo on cycle 29
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[ingredient delivered]: handle to D from Ha on cycle 29
+[recipe selection]: Hi has fifo on cycle 29
+[recipe selection]: D has fifo on cycle 30
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 30
+[recipe selection]: Hi has fifo on cycle 30
+30> [recipe selection]: D has fifo on cycle 31
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 31
+[recipe selection]: Hi has fifo on cycle 31
+[recipe selection]: D has fifo on cycle 32
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 32
+[recipe selection]: Hi has fifo on cycle 32
+[recipe selection]: D has fifo on cycle 33
+    0: is not ready, waiting on {handle, 3x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 33
+[recipe selection]: Hi has fifo on cycle 33
+[order complete] Order 4 completed (hinge) at time 33
+[recipe selection]: D has fifo on cycle 34
+    0: is not ready, waiting on {handle, 2x hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 34
+[recipe selection]: Hi has fifo on cycle 34
+[order complete] Order 6 completed (hinge) at time 34
+[recipe selection]: D has fifo on cycle 35
+    0: is not ready, waiting on {handle, hinge}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 35
+[recipe selection]: Hi has fifo on cycle 35
+[order complete] Order 8 completed (hinge) at time 35
+[recipe selection]: D has fifo on cycle 36
+    0: is not ready, waiting on {handle}
+    Selecting 0
+[recipe selection]: Ha has fifo on cycle 36
+[order complete] Order 2 completed (handle) at time 36
+[recipe selection]: D has fifo on cycle 37
+    0: is ready
+    Selecting 0
+[order complete] Order 0 completed (door) at time 48
+50> 60> 60> Simulation completed at time-step 60

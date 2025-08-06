@@ -1,0 +1,9 @@
+{
+    "name" : "hinge_disposal",
+    "type" : "waste disposal",
+    "info" : {  "disposeAmount": 10,
+    "capacity": 100,
+    "disposeInterval": 2,
+    "wasteTypes": ["hinge", "handle"], 
+    "coordinate": [-10, 10]}
+}   

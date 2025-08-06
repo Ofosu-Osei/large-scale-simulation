@@ -1,0 +1,150 @@
+{
+  "requestId" : 17,
+  "cycle" : 1,
+  "recipes" : [ {
+    "output" : "door",
+    "latency" : 12,
+    "ingredients" : {
+      "wood" : 1,
+      "handle" : 1,
+      "hinge" : 3
+    }
+  }, {
+    "output" : "handle",
+    "latency" : 5,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "hinge",
+    "latency" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "wood",
+    "latency" : 1,
+    "ingredients" : { }
+  }, {
+    "output" : "metal",
+    "latency" : 1,
+    "ingredients" : { }
+  } ],
+  "types" : [ {
+    "name" : "door",
+    "recipes" : [ "door" ]
+  }, {
+    "name" : "handle",
+    "recipes" : [ "handle" ]
+  }, {
+    "name" : "hinge",
+    "recipes" : [ "hinge" ]
+  } ],
+  "buildings" : [ {
+    "name" : "D",
+    "type" : "door",
+    "sources" : [ "W", "Hi", "Ha" ],
+    "requests" : [ 7 ],
+    "inventory" : {
+      "wood" : 1
+    },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : false,
+    "defaultSourcePolicy" : true,
+    "currReq" : 7,
+    "time" : 12
+  }, {
+    "name" : "Ha",
+    "type" : "handle",
+    "sources" : [ "M" ],
+    "requests" : [ 9 ],
+    "inventory" : {
+      "metal" : 1
+    },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "currReq" : 9,
+    "time" : 5
+  }, {
+    "name" : "Hi",
+    "type" : "hinge",
+    "sources" : [ "M" ],
+    "requests" : [ 11, 13, 15 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : false,
+    "currReq" : 11,
+    "time" : 1
+  }, {
+    "name" : "W",
+    "mine" : "wood",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  }, {
+    "name" : "M",
+    "mine" : "metal",
+    "requests" : [ 12, 14, 16 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true
+  } ],
+  "requests" : [ {
+    "id" : 7,
+    "recipe" : "door",
+    "state" : "WORKING",
+    "isUserRequest" : true
+  }, {
+    "id" : 9,
+    "recipe" : "handle",
+    "requester" : "D",
+    "state" : "WORKING",
+    "isUserRequest" : false
+  }, {
+    "id" : 11,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WORKING",
+    "isUserRequest" : false
+  }, {
+    "id" : 13,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 15,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 12,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 14,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 16,
+    "recipe" : "metal",
+    "requester" : "Hi",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  } ]
+}

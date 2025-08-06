@@ -1,0 +1,10 @@
+{
+  "recipes": [],
+  "types": [],  
+  "buildings": [
+    {
+      "name": "X",
+      "type": "nonExistentType"
+    }
+  ]
+}

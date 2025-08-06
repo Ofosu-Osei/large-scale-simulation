@@ -1,0 +1,317 @@
+{
+  "requestId" : 10,
+  "cycle" : 20,
+  "recipes" : [ {
+    "output" : "door",
+    "latency" : 12,
+    "ingredients" : {
+      "wood" : 1,
+      "handle" : 1,
+      "hinge" : 3
+    }
+  }, {
+    "output" : "handle",
+    "latency" : 5,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "hinge",
+    "latency" : 1,
+    "ingredients" : {
+      "metal" : 1
+    }
+  }, {
+    "output" : "wood",
+    "latency" : 1,
+    "ingredients" : { }
+  }, {
+    "output" : "metal",
+    "latency" : 1,
+    "ingredients" : { }
+  } ],
+  "types" : [ {
+    "name" : "door",
+    "recipes" : [ "door" ]
+  }, {
+    "name" : "handle",
+    "recipes" : [ "handle" ]
+  }, {
+    "name" : "hinge",
+    "recipes" : [ "hinge" ]
+  } ],
+  "buildings" : [ {
+    "name" : "D",
+    "type" : "door",
+    "sources" : [ [ "W", 12, 11, 1, 0 ], [ "Hi", 8, 7, 1, 0 ], [ "Ha", 4, 3, 1, 0 ] ],
+    "requests" : [ 0 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 0, 0 ],
+    "deliveries" : [ ]
+  }, {
+    "name" : "Ha",
+    "type" : "handle",
+    "sources" : [ [ "M", 16, 15, 5, 4 ] ],
+    "requests" : [ 2 ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 4, 4 ],
+    "deliveries" : [ ]
+  }, {
+    "name" : "Hi",
+    "type" : "hinge",
+    "sources" : [ [ "M", 15, 16, 8, 9 ] ],
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 8, 8 ],
+    "deliveries" : [ {
+      "requestID" : 4,
+      "timeleft" : 12,
+      "requester" : "D",
+      "coordinate" : [ 8, 5 ]
+    }, {
+      "requestID" : 6,
+      "timeleft" : 13,
+      "requester" : "D",
+      "coordinate" : [ 8, 6 ]
+    }, {
+      "requestID" : 8,
+      "timeleft" : 14,
+      "requester" : "D",
+      "coordinate" : [ 8, 7 ]
+    } ]
+  }, {
+    "name" : "W",
+    "mine" : "wood",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 12, 12 ],
+    "deliveries" : [ {
+      "requestID" : 1,
+      "timeleft" : 3,
+      "requester" : "D",
+      "coordinate" : [ 2, 2 ]
+    } ]
+  }, {
+    "name" : "M",
+    "mine" : "metal",
+    "requests" : [ ],
+    "inventory" : { },
+    "requestPolicy" : "fifo",
+    "sourcePolicy" : "qlen",
+    "defaultRequestPolicy" : true,
+    "defaultSourcePolicy" : true,
+    "coordinate" : [ 16, 16 ],
+    "deliveries" : [ {
+      "requestID" : 3,
+      "timeleft" : 3,
+      "requester" : "Ha",
+      "coordinate" : [ 7, 5 ]
+    } ]
+  } ],
+  "requests" : [ {
+    "id" : 0,
+    "recipe" : "door",
+    "state" : "WAITING",
+    "isUserRequest" : true
+  }, {
+    "id" : 2,
+    "recipe" : "handle",
+    "requester" : "D",
+    "state" : "WAITING",
+    "isUserRequest" : false
+  }, {
+    "id" : 4,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 6,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 8,
+    "recipe" : "hinge",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 1,
+    "recipe" : "wood",
+    "requester" : "D",
+    "state" : "READY",
+    "isUserRequest" : false
+  }, {
+    "id" : 3,
+    "recipe" : "metal",
+    "requester" : "Ha",
+    "state" : "READY",
+    "isUserRequest" : false
+  } ],
+  "roads" : [ {
+    "coordinate" : [ 1, 0 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 1, 1 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 2, 1 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 2, 2 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 3, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 4, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 5, 2 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 5, 3 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 5, 4 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 6, 4 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 6, 5 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 7, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 8, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 9, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 5 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 6 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 11, 6 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 6 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 7 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 8 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 9 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 10 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 12, 11 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 6 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 7 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 4, 3 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 13, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 14, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 16, 11 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 16, 12 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 13 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 14 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 16, 15 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 9 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 10 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 11 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 12 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 8, 13 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 9, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 10, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 11, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 12, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 13, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 14, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 13 ],
+    "direction" : [ -1, 0 ]
+  }, {
+    "coordinate" : [ 15, 14 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 15, 15 ],
+    "direction" : [ 0, -1 ]
+  }, {
+    "coordinate" : [ 15, 16 ],
+    "direction" : [ 0, -1 ]
+  } ]
+}

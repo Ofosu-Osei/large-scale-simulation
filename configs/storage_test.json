@@ -1,0 +1,8 @@
+{
+    "name" : "door_Storage_(100)",
+    "type" : "storage",
+    "info" : {"stores" : "door",
+    "capacity" : 10,
+    "priority" : 1.7, 
+    "coordinate": [20, 20]}
+}   

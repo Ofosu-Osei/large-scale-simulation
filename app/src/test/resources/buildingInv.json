@@ -1,0 +1,54 @@
+{
+  "cycle": 5,
+  "requestId": 100,
+  "recipes": [
+    {
+      "output": "door",
+      "latency": 12,
+      "ingredients": {
+        "wood": 1,
+        "metal": 2
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "door",
+      "recipes": ["door"]
+    }
+  ],
+  "requests": [
+    {
+      "id": 101,
+      "recipe": "door",
+      "requester": "B1",
+      "state": "WORKING",
+      "isUserRequest": true
+    }
+  ],
+  "buildings": [
+    {
+      "name": "B1",
+      "type": "door",
+      "time": 10,
+      "inventory": {
+        "wood": 5,
+        "metal": 3
+      },
+      "requestSelectPolicy": "fifo",
+      "sourceSelectPolicy": "qlen",
+      "defaultRequestPolicy": true,
+      "defaultSourcePolicy": false,
+      "sources": ["B2"],
+
+      "requests": [101],
+      "currReq": 101
+    },
+    {
+      "name": "B2",
+      "mine": "door",     
+                        
+      "sources": []
+    }
+  ]
+}
